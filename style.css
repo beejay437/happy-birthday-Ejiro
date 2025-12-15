@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+/* PASSWORD */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 9999;
+}
+
+.overlay input {
+  padding: 14px;
+  border-radius: 25px;
+  border: none;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.overlay button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.hint {
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* MAIN BG */
+.main-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HEARTS */
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255,255,255,0.7);
+  transform: rotate(45deg);
+  animation: floatUp 8s linear forwards;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+}
+
+.heart::before { top: -10px; }
+.heart::after { left: -10px; }
+
+@keyframes floatUp {
+  from { bottom: -20px; opacity: 1; }
+  to { bottom: 110%; opacity: 0; }
+}
+
+/* MESSAGES */
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.message.show {
+  opacity: 1;
+}
+
+/* NAV */
+.top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+  background: rgba(0,0,0,0.3);
+}
+
+.top-nav button {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.3);
+  color: white;
+  font-weight: bold;
+}
+
+/* CONTENT */
+#content-area {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.section {
+  display: none;
+}
+
+.section.show {
+  display: block;
+}
+
+/* MUSIC */
+.song {
+  margin: 25px 0;
+}
+
+.play-btn {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.3);
+  color: white;
+  font-weight: bold;
+}
+
+.play-btn.playing {
+  background: white;
+  color: #ff4d6d;
+}
+
+.images img {
+  width: 150px;
+  border-radius: 15px;
+  margin: 10px;
+}
+#wishlist {
+  text-align: center;
+}
+
+#wishlist ul {
+  list-style: none;       /* remove bullet points */
+  padding: 0;             /* remove default padding */
+  margin: 0 auto;         /* center the list */
+}
+
+#wishlist li {
+  margin: 8px 0;          /* spacing between items */
+  font-size: 18px;
+}
