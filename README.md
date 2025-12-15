@@ -1,16 +1,19 @@
-# Ejiro's Day
+#Ejiro's Day
 
-This is a simple personal website built with HTML, CSS, and JavaScript.
+This is a personal website built using HTML, CSS, and JavaScript.
 
 ## Features
-- Responsive design
+- Responsive layout
 - Wishlist section
-- Interactive buttons
+- Interactive elements
 
 ## Technologies Used
 - HTML
 - CSS
 - JavaScript
 
-## How to Run
-Open index.html in a browser.
+## Live Demo
+(Will be added after GitHub Pages is enabled)
+
+## How to Run Locally
+Download the files and open `index.html` in a browser.
